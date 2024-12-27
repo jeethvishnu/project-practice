@@ -4,7 +4,7 @@ time=$(date +%F-%H-%M-%S)
 scriptname=$(echo $0 | cut -d "." -f1)
 log=/tmp/$scriptname-$time.log
 
-u=$(id -u)
+# u=$(id -u)
 npu(){
     if [ $1 -ne 0 ]
     then

@@ -5,8 +5,6 @@ scriptname=$(echo $0 | cut -d "." -f1)
 log=/tmp/$scriptname-$time.log
 read password
 
-
-
 npu(){
     if [ $1 -ne 0 ]
     then

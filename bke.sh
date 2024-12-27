@@ -59,7 +59,7 @@ npu $? "unzipping"
 npm install &>>log
 lak $? "npm running"
 
-cp /home/ec2-user/project/backend.service /etc/systemd/system/backend.service
+cp /home/ec2-user/project-practice/backend.service /etc/systemd/system/backend.service
 npu $? "copying"
 
 systemctl daemon-reload &>>log

@@ -55,7 +55,7 @@ unzip /tmp/backend.zip
 npu $? "unzipping"
 
 npm install &>>log
-lak $? "npm running"
+npu $? "npm running"
 
 cp /home/ec2-user/project-practice/backend.service /etc/systemd/system/backend.service
 npu $? "copying"

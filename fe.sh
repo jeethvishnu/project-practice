@@ -29,7 +29,7 @@ systemctl enable nginx
 systemctl start nginx
 npu $? "enabling and starting"
 
-rm -rf /usr/shar/nginx/html/*
+rm -rf /usr/share/nginx/html/*
 npu $? "removing"
 
 curl -o /tmp/frontend.zip https://expense-builds.s3.us-east-1.amazonaws.com/expense-frontend-v2.zip

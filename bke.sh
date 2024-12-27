@@ -3,7 +3,7 @@ usr=$(id -u)
 time=$(date +%F-%H-%M-%S)
 scriptname=$(echo $0 | cut -d "." -f1)
 log=/tmp/$scriptname-$time.log
-read password
+
 u=$(id -u)
 npu(){
     if [ $1 -ne 0 ]
@@ -70,7 +70,7 @@ npu $? "starting and enabling"
 dnf install mysql -y &>>log
 npu $? "installing"
 
-mysql -h <MYSQL-SERVER-IPADDRESS> -uroot -p${password} < /app/schema/backend.sql
+mysql -h <MYSQL-SERVER-IPADDRESS> -uroot -pExpenseApp@1 < /app/schema/backend.sql
 npu $? "schema"
 
 systemctl restart backend &>>log

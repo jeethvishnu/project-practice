@@ -5,7 +5,7 @@ scriptname=$(echo $0 | cut -d "." -f1)
 log=/tmp/$scriptname-$time.log
 read password
 
-u=$(id -u)
+
 
 npu(){
     if [ $1 -ne 0 ]
@@ -16,7 +16,7 @@ npu(){
     fi
 }
 
-if [ $u -ne 0 ]
+if [ $usr -ne 0 ]
 then
     echo "is this sudo"
     exit 1
